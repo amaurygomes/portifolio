@@ -16,6 +16,9 @@ async function fetchGitHubUser(username) {
   const username = 'amaurygomes';
   fetchGitHubUser(username)
     .then(userData => {
+
+
+        // Se usuario existir alterar o DOM
       if (userData) {
         const bioParagraph = document.querySelector('.bio');
         bioParagraph.textContent = userData.bio;
@@ -23,7 +26,7 @@ async function fetchGitHubUser(username) {
         avatarImage.src = userData.avatar_url;
     
 
-
+         // Se usuario não existir mandar pro 404
       } else {
         window.location.href = '404.html';
       }
