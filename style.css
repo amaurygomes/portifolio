@@ -1,0 +1,220 @@
+/* Project Name: Responsive Hero Section
+Youtube: https://youtube.com/@devRasen
+Copyright: ©MdRasen */
+
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Custom CSS */
+.container .hero {
+  width: 100%;
+  height: 100vh;
+  background-color: #353353;
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #ebecf0;
+  padding: 15px 6%;
+}
+
+.hero .hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-header .header-logo h3 {
+  font-size: 30px;
+  color: #daa520;
+}
+
+.hero-header .header-logo span {
+  color: white;
+  font-size: 30px;
+}
+
+.hero-header .header-menu ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 6px;
+}
+
+.header-menu ul li a {
+  text-decoration: none;
+  color: #ebecf0;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-menu ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #daa520;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.5s;
+}
+
+.header-menu ul li a:hover::after {
+  width: 100%;
+}
+
+.header-menu .fa-solid {
+  display: none;
+}
+
+.header-icons a {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 10px 6px;
+  color: #ebecf0;
+}
+
+.header-icons a i {
+  color: #daa520;
+}
+
+.header-icons a i:hover {
+  color: #ebecf0;
+}
+
+.hero .hero-main {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 46%;
+  left: 10%;
+}
+
+.hero-main .title {
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.hero .hero-main span {
+
+  color: #daa520;
+
+
+}
+
+
+
+.hero-main .btns .btn {
+  display: inline-block;
+  width: 170px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #ebecf0;
+  border: 2px solid #daa520;
+  border-radius: 40px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+  transition: all 0.5s;
+}
+
+.btns .btn:first-child {
+  margin: 0;
+}
+
+.btns .btn-service {
+  background: #daa520;
+}
+
+.btns .btn-contact {
+  color: #ebecf0;
+}
+
+.btns .btn-contact:hover {
+  background: #daa520;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .header-icons {
+    display: none;
+  }
+
+  .hero-main .title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.1),
+        #a5bbec00,
+        #001335,
+        #353353),
+      url(images/bg.jpg);
+    background-size: cover;
+    background-position: right;
+  }
+
+  .container .hero {
+    padding: 15px 8%;
+  }
+
+  .header-menu .fa-solid {
+    display: block;
+  }
+
+  .header-menu ul {
+    background-color: #353353;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 60px;
+    border-bottom-left-radius: 30px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  .header-menu ul li {
+    width: 100%;
+    margin: 10px;
+    padding-left: 20px;
+  }
+
+  .header-menu ul li a {
+    font-size: 20px;
+  }
+
+  .header-menu ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    cursor: pointer;
+  }
+
+  .hero .hero-main {
+    top: 60%;
+  }
+
+  .hero-main .btns .btn {
+    border: 2px solid #ebecf0;
+    width: 120px;
+    font-size: 14px;
+    padding: 6px 4px;
+    margin-right: 0;
+  }
+
+  .hero-main .title {
+    font-size: 26px;
+  }
+}
